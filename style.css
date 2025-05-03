@@ -1,0 +1,326 @@
+* {
+    font-style: normal;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+#BODY {
+    background: linear-gradient(to right, grey, rgba(0, 183, 255, 0.411));
+    position: relative;
+    overflow: auto;
+    font-family: sans-serif;
+}
+
+.main {
+    background: linear-gradient(to left, black, rgb(151, 34, 34));
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.logo {
+    margin: 0;
+    padding: 0;
+}
+
+.logo img {
+    border-radius: 50%;
+    margin: 20px;
+    width: 120px;
+    height: auto;
+}
+
+nav {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-link ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: white;
+}
+/* Hover effect for Nav Links */
+.nav-link a:hover {
+    color: #00b7ff; /* Light blue color */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Button styles */
+#magicBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 30px auto;
+    display: block;
+}
+
+#magicBtn:hover {
+    transform: scale(1.05);
+}
+
+/* Gallery styles */
+.gallery {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+/* Gallery nav buttons */
+.gallery button {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    background-color: #007bff; /* Primary blue */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.gallery button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05);
+}
+
+
+/* Tabs */
+.tabs {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.tab-btn {
+    padding: 10px;
+    margin-right: 5px;
+    background-color: #f15315;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tab-content {
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #420f2f;
+    border-radius: 5px;
+    width: 50%;
+    animation: fadeIn 0.5s;
+    text-align: center;
+}
+/* ✅ Hover effect */
+.tab-btn:hover {
+    background-color: #00b7ff; /* Change color on hover */
+    color: white;
+    transform: scale(1.05); /* Slight zoom for feedback */
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* Menu toggle hidden on desktop */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+    .nav-link {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin: 0 20px;
+    }
+
+    #navMenu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    #navMenu.show {
+        display: flex;
+    }
+
+    #navMenu li {
+        margin: 10px 0;
+    }
+
+    .nav-link ul {
+        justify-content: flex-start;
+        gap: 0;
+    }
+}
+.about-columns {
+    column-count: 2;
+    column-gap: 40px;
+    text-align: justify;
+  }
+  
+  @media (max-width: 768px) {
+    .about-columns {
+      column-count: 1; /* Stack on small screens */
+    }
+  }
+  /* Flex container */
+.main-content {
+    display: flex;
+    flex-direction: column; /* or row if you want side-by-side layout */
+    flex-wrap: wrap;
+    min-height: 100vh;
+  }
+  
+  /* About section takes available space */
+  .about-section {
+    flex: 1;
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: rgba(167, 91, 202, 0.747);
+    border-radius: 10px;
+    color: #0f0d0c;
+  }
+  #About {
+    font-size: 2rem;
+    color: #f15315;
+    text-align: center;
+}
+
+.paragraph {
+    background: linear-gradient(to right, white, rgb(94, 25, 151));
+    font-size: 0.7rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+.h2{
+    background: linear-gradient(to right, white, rgb(94, 25, 151));
+    font-size: 0.6rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+#About:hover {
+    border-radius: 15px; /* Adjust the value for more or less rounding */
+     /* Example: Change background color */
+    color: white; /* Example: Change text color */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+.h2 ul{
+    ul {
+        list-style-type: none; /* Removes bullets */
+        padding: 0; /* Removes default padding */
+        margin: 0; /* Removes default margin */
+    }
+}
+.h2 li{
+    text-decoration: none;
+    font-size: 0.6rem;
+    padding: 2px;
+}
+.form-section {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .form-section label {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .feedback {
+    font-size: 0.9em;
+    color: #ff5555;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  input.valid {
+    border: 2px solid #00b7ff;
+  }
+  
+  input.invalid {
+    border: 2px solid #ff5555;
+  }
+  .submit-btn {
+    background-color: #00b7ff;
+    color: rgb(230, 17, 17);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 183, 255, 0.3);
+  }
+  
+  /* Hover & focus styles */
+  .submit-btn:hover,
+  .submit-btn:focus {
+    background-color: #009ed6;
+    transform: scale(1.03);
+  }
+  
+  /* Optional active effect */
+  .submit-btn:active {
+    transform: scale(0.98);
+    background-color: #1e5d74;
+  }
+  
+  
+  

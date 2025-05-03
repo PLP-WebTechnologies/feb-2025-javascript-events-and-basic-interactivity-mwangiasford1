@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="BODY">
+    <header>
+        <div class="main">
+            <nav>
+                <div class="nav-link">
+                    <div class="logo">
+                        <img src="https://plus.unsplash.com/premium_photo-1675793715030-0584c8ec4a13?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="logo">
+                    </div>
+                    <div class="menu-toggle" id="menuToggle">&#9776;</div> <!-- Hamburger Icon -->
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#form-section">Register</a></li>
+                    </ul>        
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Button -->
+        <button id="magicBtn">Click Me!</button>
+
+        <!-- Image Gallery -->
+        <div class="gallery">
+            <img id="galleryImg" src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8amF2YXNjcmlwdCUyMGV2ZW50JTIwaGFuZGxpbmd8ZW58MHx8MHx8fDA%3D" alt="Gallery Image">
+            <div>
+                <button onclick="changeImage(-1)"><</button>
+                <button onclick="changeImage(1)">></button>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn" onclick="showTab('tab1')">Intaractive</button>
+            <button class="tab-btn" onclick="showTab('tab2')">Event </button>
+        </div>
+        <div id="tab1" class="tab-content">Interactive Design is all about creating engaging experiences that allow users to actively participate rather than just passively consume content. It focuses on how users interact with digital interfaces, ensuring smooth, intuitive, and enjoyable interactions.
+            Key Principles of Interactive Design
+            - User Control – Users should feel in charge of their experience, with clear navigation and responsive feedback.
+            - Feedback & Response – Every action should trigger a visible response, like button clicks changing color or animations confirming interactions.
+            - Consistency – Design elements should remain uniform across a platform to avoid confusion.
+            - Simplicity – Keeping interactions straightforward ensures users can navigate without frustration.
+            - Accessibility – Interactive elements should be usable by all, including those with disabilities.
+            Examples of Interactive Design
+            - Hover Effects – Buttons or links changing appearance when hovered over.
+            - Animations – Smooth transitions when switching between pages.
+            - Drag & Drop Features – Allowing users to move elements around.
+            - Chatbots & AI Assistants – Providing real-time responses to user queries.
+            Want to explore interactive elements for your web projects? Let’s brainstorm some ideas! 🚀 You can also check out this resource for more insights.
+            .</div>
+        <div id="tab2" class="tab-content" style="display: none;">Event handling in programming refers to the process of responding to user interactions or system-generated events. It allows applications to react dynamically to actions like clicks, key presses, or API responses.
+            Key Concepts in Event Handling
+            - Event Listeners – Functions that wait for specific events and execute code when triggered.
+            - Event Types – Common events include:
+            - click – When a user clicks an element.
+            - mouseover – When the mouse hovers over an element.
+            - keydown – When a key is pressed.
+            - submit – When a form is submitted.
+            - Event Propagation – Determines how events travel through the DOM:
+            - Bubbling – Events move from the target element up to its ancestors.
+            - Capturing – Events move from ancestors down to the target element.
+            .</div>
+    </main>
+    <section id="about" class="about-section">
+        <h1 id="About">About Us</h1>
+        <div class="about-columns">
+          <p class="paragraph">Welcome to our interactive demo site! This project showcases various JavaScript and CSS features like events, animations, dynamic elements, and responsive design.</p>
+      
+          <p class="paragraph">This project was developed by a creative team exploring front-end web development. We aim to create intuitive and visually appealing interfaces using clean HTML, CSS, and JavaScript.</p>
+        </div>
+      
+        <h2 class="h2">Features Included:</h2>
+        <ul class="h2">
+          <li>Event handling: click, hover, keypress, and double-click</li>
+          <li>Interactive buttons with state changes</li>
+          <li>Image slideshow with transitions</li>
+          <li>Tabbed content with animations</li>
+          <li>Mobile-friendly navigation with a hamburger menu</li>
+        </ul>
+      </section>
+
+      <section id="form-section" class="form-section">
+        <h2>Register</h2>
+        <form id="registerForm" novalidate>
+          <label>
+            Name:
+            <input type="text" id="name" required />
+            <span class="feedback" id="nameFeedback"></span>
+          </label>
+      
+          <label>
+            Email:
+            <input type="email" id="email" required />
+            <span class="feedback" id="emailFeedback"></span>
+          </label>
+      
+          <label>
+            Password:
+            <input type="password" id="password" required minlength="8" />
+            <span class="feedback" id="passwordFeedback"></span>
+          </label>
+      
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      
+      
+
+    <script src="script.js"></script>
+</body>
+</html>
